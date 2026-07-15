@@ -1,6 +1,6 @@
-#import "brazilian-computing-society.typ": brazilian-computing-society-article
+#import "@local/brazilian-computer-society:0.1.0" as sbc
 
-#show: brazilian-computing-society-article.with(
+#show: sbc.brazilian-computing-society-article.with(
 	title: [Um modelo para Ronaldo],
 	authors: (
 		(

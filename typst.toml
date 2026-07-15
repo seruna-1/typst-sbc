@@ -1,0 +1,15 @@
+[package]
+name = "brazilian-computer-society"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Mateus Cezário Barreto <mateus.cezario.barreto@gmail.com>"]
+license = "Unlicense"
+description = "Template in the format of Brazilian Computer Society conferences."
+repository = "https://github.com/seruna-1/typst-sbc"
+keywords = ["academic"]
+categories = ["paper"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+
