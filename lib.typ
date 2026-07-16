@@ -23,10 +23,26 @@
 		first-line-indent: 1.25cm
 	)
 	set heading(numbering: "1.1.1.  ")
-	show heading: set text(size: 12pt)
+	show heading: set text(size: 13pt)
 	show heading: set block(above: 0.42cm)
-	show figure: set block(above: 0.42cm, inset: (left: 0.8cm, right: 0.8cm))
-	show figure.caption: set text(weight: "bold")
+	show figure: set block(above: 0.42cm)
+	show figure.caption: caption => {
+		set text(font: "Liberation Sans", size: 10pt, weight: "bold")
+		layout(size => context {
+			let width = measure(caption).width
+			if width < size.width {
+				// Center, it fits on a single line.
+				align(center, caption)
+			}
+			else {
+				// Justify and indent by 0.8cm on both margins, it wraps
+				pad(x: 0.8cm)[
+					#set par(justify: true)
+					#align(left, caption)
+				]
+			}
+		})
+	}
 	[
 		#align(center, text(size: 16pt, weight: "bold", title))
 
