@@ -25,6 +25,8 @@
 	set heading(numbering: "1.1.1.  ")
 	show heading: set text(size: 12pt)
 	show heading: set block(above: 0.42cm)
+	show figure: set block(above: 0.42cm, inset: (left: 0.8cm, right: 0.8cm))
+	show figure.caption: set text(weight: "bold")
 	[
 		#align(center, text(size: 16pt, weight: "bold", title))
 
