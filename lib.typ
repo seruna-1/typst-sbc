@@ -51,7 +51,12 @@
 		#align(center, block(
 			above: 0.42cm,
 			below: 0.21cm,
-			text(size: 10pt, font: "Liberation Mono")[#authors.map(author => author.email).join(", ")]
+			text(
+				size: 10pt,
+				font: "Courier Prime",
+				fill: rgb("#2a2a2a"),
+				authors.map(author => author.email).join(", ")
+			)
 		))
 
 		#pad(left: 0.8cm, right: 0.8cm)[

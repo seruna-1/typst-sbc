@@ -15,3 +15,4 @@ git clone "https://github.com/seruna-1/typst-sbc.git" ~/.local/share/typst/packa
 typst init @local/brazilian-computer-society:0.1.0 artigo-para-entregar-amanha
 ```
 
+A fonte monoespaçada escolhida para substituir a Courier é a [Courier Prime](https://quoteunquoteapps.com/courierprime/).
