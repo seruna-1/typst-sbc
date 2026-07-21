@@ -19,13 +19,26 @@
 	)
 	set par(
 		justify: true,
+		leading: 0.25em,
 		spacing: 0.21cm,
 		first-line-indent: 1.25cm
 	)
 	set heading(numbering: "1.1.1.  ")
 	show heading: set text(size: 13pt)
-	show heading: set block(above: 0.42cm)
-	show figure: set block(above: 0.42cm)
+	show heading: set block(above: 0.42cm, below: 0.21cm)
+	show figure: set block(above: 0.42cm, below: 0.42cm)
+	set figure.caption(separator: ". ")
+	show figure: figure => {
+		let is-table = figure.kind == table or figure.kind == "table"
+		if is-table {
+			let fig-width = if figure.has("width") { figure.width } else { auto }
+			block(width: fig-width, breakable: false)[
+				#if figure.has("caption") [ #figure.caption ]
+				#figure.body
+			]
+		}
+		else { figure }
+	}
 	show figure.caption: caption => {
 		set text(font: "Liberation Sans", size: 10pt, weight: "bold")
 		layout(size => context {
