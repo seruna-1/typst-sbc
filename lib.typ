@@ -67,14 +67,21 @@
 					author => author.name + super[#(authors.position(affiliated => affiliated.affiliation == author.affiliation)+1)]
 				).join(", ")
 			)
-		))
+		)) 
 
 		#align(center, block(
 			above: 0.42cm,
-			authors.enumerate().map(pair => [
-				#let (index, author) = pair
-				#super[#(1+index)]#author.affiliation
-			]).join(", ")
+			authors.enumerate().map(pair => {
+				let (index, author) = pair
+				let skip = false
+				for i in range(0, index) {
+					if authors.at(i).affiliation == author.affiliation {
+						skip = true
+					}
+				}
+				if not skip { super[#(1+index)] + author.affiliation }
+				else { none }
+			}).filter(item => item != none).join(", ")
 		))
 
 		#align(center, block(
