@@ -25,11 +25,12 @@
 	)
 	set heading(numbering: "1.1.1.  ", hanging-indent: 0cm)
 	show heading: set text(size: 13pt)
-	show heading: set block(above: 0.42cm, below: 0.42cm)
+	show heading: set block(above: 0.84cm, below: 0.42cm)
 	show math.equation.where(block: true): pad.with(left: 2.5cm)
 	show math.equation.where(block: true): set align(left)
+	show math.equation: set block(above: 0.84cm, below: 0.84cm)
 	set math.equation(numbering: "(1)")
-	show figure: set block(above: 0.42cm, below: 0.42cm)
+	show figure: set block(above: 0.84cm, below: 0.84cm)
 	set figure.caption(separator: ". ")
 	show figure: figure => {
 		let is-table = figure.kind == table or figure.kind == "table"
