@@ -26,6 +26,9 @@
 	set heading(numbering: "1.1.1.  ")
 	show heading: set text(size: 13pt)
 	show heading: set block(above: 0.42cm, below: 0.42cm)
+	show math.equation.where(block: true): pad.with(left: 2.5cm)
+	show math.equation.where(block: true): set align(left)
+	set math.equation(numbering: "(1)")
 	show figure: set block(above: 0.42cm, below: 0.42cm)
 	set figure.caption(separator: ". ")
 	show figure: figure => {
