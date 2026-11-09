@@ -23,7 +23,7 @@
 		spacing: 0.42cm,
 		first-line-indent: 1.25cm
 	)
-	set heading(numbering: "1.1.1.  ")
+	set heading(numbering: "1.1.1.  ", hanging-indent: 0cm)
 	show heading: set text(size: 13pt)
 	show heading: set block(above: 0.42cm, below: 0.42cm)
 	show math.equation.where(block: true): pad.with(left: 2.5cm)
