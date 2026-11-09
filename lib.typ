@@ -98,7 +98,7 @@
 		#pad(left: 0.8cm, right: 0.8cm)[
 			#v(0.42cm)
 			#if abstract != "" [ #emph[*Abstract.* #abstract] ]
-			#emph[*Resumo.* #resumo]
+			#if resumo != "" [ #emph[*Resumo.* #resumo] ]
 			#v(0.42cm)
 		]
 
